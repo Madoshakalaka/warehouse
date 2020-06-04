@@ -44,6 +44,9 @@ for skin_file in Path("skins").glob("*.zip"):
             the_dir = monster_dir
         else:
             the_dir = heroes_dir
-        (the_dir / ".skin_identifier").write_text(skin_file.stem)
 
+        # do stuff here
+
+        # (the_dir / ".skin_identifier").unlink()
+        # (next(the_dir.glob("*")) / ".skin_identifier").write_text(skin_file.stem)
         zipit(str(temp_dir), "skins/" + skin_file.name)
